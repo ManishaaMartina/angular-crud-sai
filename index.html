@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="script.js"></script>
+
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <input type="text" ng-model="userinp" />
+        <input type="button" ng-click="adduser()" value="add" ng-show="AddBtn" />
+        <input type="button" ng-click="update()" value="update" ng-show="UpdateBtn" />
+        <hr/>
+        <table>
+            <tr ng-repeat="x in users">
+                <td>{{x}}</td>
+                <td><input type="button" ng-click="edit($index)" value="edit" />
+                </td>
+                <td><input type="button" ng-click="delete($index)" value="delete" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
